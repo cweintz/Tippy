@@ -24,7 +24,7 @@ The following **extensions** are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<iframe src="https://giphy.com/embed/1J8sWEt4fkcTFvgp4k" width="230" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/android-software-development-tip-calculator-1J8sWEt4fkcTFvgp4k">via GIPHY</a></p>
+<img src='https://media.giphy.com/media/1J8sWEt4fkcTFvgp4k/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [GIPHY](https://giphy.com/).
 
