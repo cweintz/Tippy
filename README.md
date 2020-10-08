@@ -24,9 +24,9 @@ The following **extensions** are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='<iframe src="https://giphy.com/embed/1J8sWEt4fkcTFvgp4k" width="230" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/android-software-development-tip-calculator-1J8sWEt4fkcTFvgp4k">via GIPHY</a></p>' />
+<iframe src="https://giphy.com/embed/1J8sWEt4fkcTFvgp4k" width="230" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/android-software-development-tip-calculator-1J8sWEt4fkcTFvgp4k">via GIPHY</a></p>
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+GIF created with [GIPHY](https://giphy.com/).
 
 ## Notes
 
