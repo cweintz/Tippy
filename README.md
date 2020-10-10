@@ -18,13 +18,13 @@ The following **required** functionality is completed:
 The following **extensions** are implemented:
 
 * [x] Custom colors palette selected
-* [ ] Coming soon!
+* [x] Ability to split the bill
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://media.giphy.com/media/1J8sWEt4fkcTFvgp4k/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://media.giphy.com/media/JwCihv1SCAWMparv6E/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [GIPHY](https://giphy.com/).
 
