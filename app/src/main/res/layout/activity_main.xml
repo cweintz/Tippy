@@ -33,15 +33,26 @@
         app:layout_constraintTop_toBottomOf="@+id/tvBaseLabel" />
 
     <TextView
-        android:id="@+id/tvTipLabel"
+        android:id="@+id/tvSplitLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:text="Tip"
+        android:text="Split"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/tvBaseLabel"
         app:layout_constraintTop_toBottomOf="@+id/tvTipPercent" />
+
+    <TextView
+        android:id="@+id/tvTipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Tip"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvBaseLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvSplitLabel" />
 
     <TextView
         android:id="@+id/tvTotalLabel"
@@ -54,6 +65,17 @@
         app:layout_constraintEnd_toEndOf="@+id/tvBaseLabel"
         app:layout_constraintTop_toBottomOf="@+id/tvTipLabel" />
 
+    <TextView
+        android:id="@+id/tvEachLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Each"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvBaseLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalLabel" />
+
     <!-- Views on the right -->
 
     <EditText
@@ -65,7 +87,8 @@
         android:inputType="numberDecimal"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@id/tvBaseLabel"
-        app:layout_constraintStart_toEndOf="@+id/tvBaseLabel" />
+        app:layout_constraintStart_toEndOf="@+id/tvBaseLabel"
+        tools:text="43.39" />
 
     <SeekBar
         android:id="@+id/seekBarTip"
@@ -73,6 +96,7 @@
         android:layout_height="20dp"
         android:layout_marginStart="32dp"
         android:max="30"
+        android:progress="15"
         app:layout_constraintBottom_toBottomOf="@id/tvTipPercent"
         app:layout_constraintStart_toEndOf="@+id/tvTipPercent"
         app:layout_constraintTop_toTopOf="@id/tvTipPercent" />
@@ -87,6 +111,30 @@
         app:layout_constraintStart_toStartOf="@+id/seekBarTip"
         app:layout_constraintTop_toBottomOf="@+id/seekBarTip"
         tools:text="Acceptable" />
+
+    <EditText
+        android:id="@+id/etSplit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:ems="1"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvSplitLabel"
+        app:layout_constraintStart_toEndOf="@+id/tvSplitLabel"
+        tools:text="2" />
+
+    <TextView
+        android:id="@+id/tvWays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="way(s)"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSplitLabel"
+        app:layout_constraintStart_toEndOf="@+id/etSplit" />
 
     <TextView
         android:id="@+id/tvTipAmount"
@@ -106,7 +154,17 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvTotalLabel"
         app:layout_constraintStart_toEndOf="@+id/tvTotalLabel"
-        tools:text="48.25" />
+        tools:text="48.26" />
+
+    <TextView
+        android:id="@+id/tvEachAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvEachLabel"
+        app:layout_constraintStart_toEndOf="@+id/tvEachLabel"
+        tools:text="24.13" />
 
     <!-- Footer views -->
 

@@ -21,6 +21,16 @@ class MainActivity : AppCompatActivity() {
         seekBarTip.progress = INITIAL_TIP_PERCENT
         tvTipPercent.text = "$INITIAL_TIP_PERCENT%"
         updateTipDescription(INITIAL_TIP_PERCENT)
+
+        etBase.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+                Log.i(TAG, "afterTextChanged $s")
+                computeTipAndTotal()
+            }
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+        })
+
         seekBarTip.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 Log.i(TAG,"onProgressChanged $progress")
@@ -28,20 +38,17 @@ class MainActivity : AppCompatActivity() {
                 updateTipDescription(progress)
                 computeTipAndTotal()
             }
-
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
-
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         })
 
-        etBase.addTextChangedListener(object : TextWatcher {
+        etSplit.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 Log.i(TAG, "afterTextChanged $s")
                 computeTipAndTotal()
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
         })
     }
@@ -68,13 +75,17 @@ class MainActivity : AppCompatActivity() {
         if (etBase.text.isEmpty()) {
             tvTipAmount.text = ""
             tvTotalAmount.text = ""
+            tvEachAmount.text = ""
             return
         }
         val baseAmount = etBase.text.toString().toDouble()
         val tipPercent = seekBarTip.progress
+        val splitWays = if (etSplit.text.isEmpty()) 1 else etSplit.text.toString().toInt()
         val tipAmount = baseAmount * tipPercent / 100
         val totalAmount = baseAmount + tipAmount
+        val eachAmount = totalAmount / splitWays
         tvTipAmount.text = "%.2f".format(tipAmount)
         tvTotalAmount.text = "%.2f".format(totalAmount)
+        tvEachAmount.text = if (splitWays > 1) "%.2f".format(eachAmount) else ""
     }
 }
